@@ -1,0 +1,15 @@
+{
+  "name": "proyect1",
+  "version": "1.0.0",
+  "description": "demos de curso",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "author": "Palomino",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
