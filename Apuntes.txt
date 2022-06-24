@@ -45,7 +45,13 @@ ssh-keygen -t rsa -b 4096 -C "correoRelazionado" = generamos una llave publica y
 eval $(ssh-agent -s) = comando para evaluar el funcionaminto de el administrador de llaves ssh
 ssh-add ~/.ssh/id_rsa = agregamos la llave en windows
 
+remote set-url origin "urlPorSSH" = seteamos el cambio de el tipo de comunicacion ques e tendria en la comuniocacion del repositorioo a SHH
 
+log --all --graph --decorate --oneline
 
+tag -a "nameOfTAG" -m "messagesForTAG" "#TAG" = creamos un tag para la refeencia "#TAG" que es un numero asignadopor los commits adicional
+                                                tenemso la bandera -a para agregar el tag, la -m para el mensaje tenemso que dejar un mensaje
+                                                del tag el como en un commit, esto deja una instancia para ver que estamos haciendo en ese momento.
 
-                                
+show-ref --tags = nos permite ver los tags asi como la referencia numerica de estos.
+                                                               
