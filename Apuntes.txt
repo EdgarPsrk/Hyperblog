@@ -1,0 +1,51 @@
+Tenemos que escribri algo para modificarlo 
+poco a poco, para trabajar con esto 
+sobre el editor de texto yeahh baby!!
+sure sir this is true.
+
+Notas
+Todos empiezan con git
+
+init = iniciamos el repositorio en la carpeta donde estamos
+
+config --global user.name "name" = configuramos el nombre para el registro de los cambios
+
+config --global user.email "correoRelazionado" = usamos el correo para identificarnos
+
+add . = agrega los cambios de cada archivo, se puede poner a cada archivo por separado o trackear  todo con el .
+
+commit = pasa los cambios del staging a la base de datos del repositorio local, debe levar un mensaje que se puede 
+         agregar con la bandera -m al colocarla con 'mensaje' o por el editor vim, podemso agregar la bandera -am
+         para agregar todos los cambios realizados en el archivo ya trackeado, ( solo sirve para archivos ya trackeados)
+         y colocar el mensaje, ahorrandonos el comando gitt add .
+
+branch = crea una rama al colocar 'nombre_rama'
+
+checkout = cambia de una rama a otra al colocar la rama  podemso pasar a un tag antiguo colocando delate su valor
+
+show = muestra los cambios del ultimo commit
+
+log = muestra los commits realizados durante el progreso de la rama asi como los tags que poseee cada uno.
+
+status = muestra el estao de los archivos, untracked, tracked, modified.
+
+merge = fusiona de la rama que estamos a la que apuntemos 'rama' reliza el commita a referenciado a la rama que estamos.
+
+remote origin "url" = esto es por http para agregar los cambios de manera remota al github, agregamos uja dirrecion donde guardaremos estos cambios.
+
+push origin master = enviados al repositorio local a github.
+
+pull origin master = la usamos para fusionar las ramas del local y del github, con lo cual ya podemos trabajar, en remoto
+
+git pull origin master --allow-unrelated-histories = lo usamos paera iniciar el repositorio por los conflictos que se generan al traer 
+                                                     por primera vez el proyecto cuando ya esta avanzado.
+
+generamos una clave de SHH
+ssh-keygen -t rsa -b 4096 -C "correoRelazionado" = generamos una llave publica y privada.
+eval $(ssh-agent -s) = comando para evaluar el funcionaminto de el administrador de llaves ssh
+ssh-add ~/.ssh/id_rsa = agregamos la llave en windows
+
+
+
+
+                                
