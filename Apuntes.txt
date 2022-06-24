@@ -54,4 +54,10 @@ tag -a "nameOfTAG" -m "messagesForTAG" "#TAG" = creamos un tag para la refeencia
                                                 del tag el como en un commit, esto deja una instancia para ver que estamos haciendo en ese momento.
 
 show-ref --tags = nos permite ver los tags asi como la referencia numerica de estos.
-                                                               
+
+push --tags = lo usamos para empujar las etiquetas que generamos en el local a el HUB
+
+tag -d "nameOfTAG" = usamos este comando para eliminar un tag
+
+push origin :refs/tags/error = con este comando borramos el tag enviado al HUB, es una sistaxis especial de github
+
