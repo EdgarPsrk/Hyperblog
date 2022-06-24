@@ -1,6 +1,5 @@
 Esta es mi historia.
-no hay mucho que decir, lo mas relevante de hoy en dia
-es que estoy aprendidendo a usar git para despues apredner github.
-ya estamos aqui, que pasara no lo se.
+No hay mucho que decir, lo mas relevante de hoy en dia es que estoy aprendidendo a usar git para despues aprender github.
+
 
 
