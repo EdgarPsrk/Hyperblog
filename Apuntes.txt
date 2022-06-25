@@ -1,8 +1,3 @@
-Tenemos que escribri algo para modificarlo 
-poco a poco, para trabajar con esto 
-sobre el editor de texto yeahh baby!!
-sure sir this is true.
-
 Notas
 Todos empiezan con git
 
@@ -14,28 +9,28 @@ config --global user.email "correoRelazionado" = usamos el correo para identific
 
 add . = agrega los cambios de cada archivo, se puede poner a cada archivo por separado o trackear  todo con el .
 
-commit = pasa los cambios del staging a la base de datos del repositorio local, debe levar un mensaje que se puede 
-         agregar con la bandera -m al colocarla con 'mensaje' o por el editor vim, podemso agregar la bandera -am
-         para agregar todos los cambios realizados en el archivo ya trackeado, ( solo sirve para archivos ya trackeados)
+commit = pasa los cambios del staging a la base de datos del repositorio local, debe llevar un mensaje que se puede 
+         agregar con la bandera -m al colocarla con 'mensaje' o por el editor vim, podemos agregar la bandera -am
+         para agregar todos los cambios realizados en el archivo ya trackeado, ( solo sirve para archivos anteriormente trackeados)
          y colocar el mensaje, ahorrandonos el comando gitt add .
 
-branch = crea una rama al colocar 'nombre_rama'
+branch "nameBranch" = crea una rama al colocar 'nombre_rama'
 
-checkout = cambia de una rama a otra al colocar la rama  podemso pasar a un tag antiguo colocando delate su valor
+checkout = cambia de una rama a otra al colocar la rama o podemos pasar a un tag antiguo colocando delante el numero asignado
 
 show = muestra los cambios del ultimo commit
 
 log = muestra los commits realizados durante el progreso de la rama asi como los tags que poseee cada uno.
 
-status = muestra el estao de los archivos, untracked, tracked, modified.
+status = muestra el estado de los archivos (untracked, tracked, modified).
 
-merge = fusiona de la rama que estamos a la que apuntemos 'rama' reliza el commita a referenciado a la rama que estamos.
+merge "ramaTraida"= fusiona de la rama en la que estamos a la que apuntemos 'rama' reliza el commit referenciado a la rama que estamos.
 
-remote origin "url" = esto es por http para agregar los cambios de manera remota al github, agregamos uja dirrecion donde guardaremos estos cambios.
+remote origin "url" = esto es por http para agregar los cambios de manera remota al github, agregamos una dirrecion donde guardaremos estos cambios.
 
 push origin master = enviados al repositorio local a github.
 
-pull origin master = la usamos para fusionar las ramas del local y del github, con lo cual ya podemos trabajar, en remoto
+pull origin master = traemos los cambios ocurridos en el github a nuestro repositorio local, esto es una buena practica, traer todo lo que hay haya antes de mandar algo.
 
 git pull origin master --allow-unrelated-histories = lo usamos paera iniciar el repositorio por los conflictos que se generan al traer 
                                                      por primera vez el proyecto cuando ya esta avanzado.
@@ -45,13 +40,13 @@ ssh-keygen -t rsa -b 4096 -C "correoRelazionado" = generamos una llave publica y
 eval $(ssh-agent -s) = comando para evaluar el funcionaminto de el administrador de llaves ssh
 ssh-add ~/.ssh/id_rsa = agregamos la llave en windows
 
-remote set-url origin "urlPorSSH" = seteamos el cambio de el tipo de comunicacion ques e tendria en la comuniocacion del repositorioo a SHH
+remote set-url origin "urlPorSSH" = seteamos el cambio de el tipo de comunicacion que se tendria en la comunicacion del repositorio a SHH
 
-log --all --graph --decorate --oneline
+log --all --graph --decorate --oneline = comando para mostra bonito el log
 
-tag -a "nameOfTAG" -m "messagesForTAG" "#TAG" = creamos un tag para la refeencia "#TAG" que es un numero asignadopor los commits adicional
-                                                tenemso la bandera -a para agregar el tag, la -m para el mensaje tenemso que dejar un mensaje
-                                                del tag el como en un commit, esto deja una instancia para ver que estamos haciendo en ese momento.
+tag -a "nameOfTAG" -m "messagesForTAG" "#TAG" = creamos un tag para la referencia "#TAG" que es un numero asignado por los commits adicional
+                                                tenemos la bandera -a para agregar el tag, la -m para el mensaje ya que tenemos que dejar un mensaje
+                                                de la creacion del tag, como en un commit, esto deja una instancia para ver que estamos haciendo en ese momento.
 
 show-ref --tags = nos permite ver los tags asi como la referencia numerica de estos.
 
@@ -61,3 +56,10 @@ tag -d "nameOfTAG" = usamos este comando para eliminar un tag
 
 push origin :refs/tags/error = con este comando borramos el tag enviado al HUB, es una sistaxis especial de github
 
+clone "url" = lo usamos despues de un fork con lo cual nos trea todos los archivos de este bifurcacion, para poder trabajarlo en local
+
+remote add "upstream" = usamos este comando para agregar las actualizaciones de un fork, es decir agregamos otro pundo de donde traer datos cion el pull
+                        esto nos permite tener actualizado ese fork de un proyect, se traen los cambios con "pull upstream master" para despues fusionarlos
+                        con el nuestro fork, en 2 pasos traemos los cambios al repositorio local a git en la rama master, hacemos un commit de los cambios,
+                        para despues hacer un push a nuestro github con el "push origin master", ---traemos a local, registramos los cambios y mandamos a 
+                        nuestro fork en github--- de este manera tenemso 2 fuent4es para actualizar el repositorio local.
